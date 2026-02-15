@@ -1,0 +1,6 @@
+# Private files
+buildSite.md
+content.md
+
+# OS files
+.DS_Store
