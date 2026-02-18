@@ -1,116 +1,210 @@
-/* Hero header */
-.page-header1 {
+/* === SocialLLM Workshop — PersonaLLM-inspired style === */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #111;
+  background: #F0F8FF;
+  line-height: 1.6;
+}
+
+a { color: #1e5a99; text-decoration: none; transition: color 0.2s; }
+a:hover { color: #0d3d6b; }
+
+strong { font-weight: 600; }
+
+/* ---- Navbar ---- */
+.navbar {
+  background: #E6F3FF;
+  border-bottom: 1px solid #B8D9F5;
+  padding: 0.6rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-brand:hover { color: #1e5a99; }
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.navbar-links a {
+  color: #111;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.navbar-links a:hover { color: #444; }
+
+/* ---- Hero ---- */
+.hero {
   position: relative;
   overflow: hidden;
   background: url('./data/images/Los_Angeles_with_Mount_Baldy.jpg') center 50% / cover no-repeat;
-  min-height: 420px;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.overlay {
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.50);
   z-index: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  max-width: 850px;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.hero-content .hero-sub {
+  font-size: 1.15rem;
+  opacity: 0.92;
+  margin-bottom: 0.3rem;
+}
+
+/* ---- Main container ---- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Sections ---- */
+section {
+  padding: 1.8rem 0;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #B8D9F5;
+  padding-bottom: 0.4rem;
+}
+
+section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+section p {
+  margin-bottom: 0.8rem;
+}
+
+section ul {
+  margin: 0.4rem 0 0.8rem 1.4rem;
+}
+
+section li {
+  margin-bottom: 0.3rem;
+}
+
+/* ---- Table ---- */
+table {
   width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid #d4e6f5;
+}
+
+th {
+  background: #E6F3FF;
+  font-weight: 600;
+}
+
+tr:hover { background: #f5faff; }
+
+/* ---- People cards (flex row) ---- */
+.people-row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 420px;
-  padding: 1.5rem 1.5rem 1.5rem !important;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
 }
 
-.hero-spacer {
-  flex: 1;
+.person-card {
+  width: 200px;
+  text-align: center;
 }
 
-.rcorners1 {
-  border-radius: 10px;
-  background: #ffffffd0;
-  padding: 5px 15px;
-  font-size: 100%;
-  color: #5c5c5c;
-  margin: 4px;
-}
-
-.rcorners1:hover {
-  background: #ffffff;
-}
-
-/* Center crop profile images */
-.image.is-128x128 {
-  overflow: hidden;
-  position: relative;
-}
-
-.image.is-128x128 img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.image.is-128x128.mx-auto {
-  margin: 0 auto;
-  display: block;
-}
-
-.card-content.has-text-centered .image.is-128x128 {
-  margin: 0 auto;
-}
-
-/* Card styling */
-.card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  height: 100%;
-}
-
-/* Placeholder image */
-img[src$="placeholder.svg"] {
-  background: #e0e0e0;
+.person-card img {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
+  object-fit: cover;
+  transition: filter 0.25s;
 }
 
-/* Table */
-.table td {
-  vertical-align: middle;
+.person-card img:hover {
+  filter: brightness(1.15);
 }
 
-/* Footer */
+.person-card .name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+.person-card .affil {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ---- Footer ---- */
 .footer {
-  background-color: #1a3a5c;
-  color: #ffffffaa;
-  padding: 2rem;
+  background: #B8D9F5;
+  color: #111;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
-/* Mobile responsiveness for speaker cards */
-@media screen and (max-width: 768px) {
-  .columns.is-vcentered {
-    display: block;
-  }
-  .columns.is-vcentered .column {
-    text-align: center;
-    width: 100%;
-  }
-  .columns.is-vcentered .column.is-one-quarter {
-    margin: 0 auto;
-    max-width: 200px;
-  }
-  .columns.is-vcentered .column .image.is-128x128 {
-    margin: 0 auto 1rem auto;
-  }
+/* ---- Mobile ---- */
+@media screen and (max-width: 700px) {
+  .navbar { justify-content: center; text-align: center; }
+  .hero-content h1 { font-size: 1.6rem; }
+  .hero { min-height: 280px; }
+  .people-row { justify-content: center; }
+  .person-card { width: 160px; }
+  .person-card img { width: 110px; height: 110px; }
 }
