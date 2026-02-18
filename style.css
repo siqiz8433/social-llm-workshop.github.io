@@ -6,6 +6,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.1rem;
   color: #111;
   background: #F0F8FF;
   line-height: 1.6;
