@@ -57,7 +57,7 @@ strong { font-weight: 600; }
 .hero {
   position: relative;
   overflow: hidden;
-  background: url('./data/images/Los_Angeles_with_Mount_Baldy.jpg') center 50% / cover no-repeat;
+  background: #1a2a3a url('./data/images/Los_Angeles_with_Mount_Baldy.jpg') center 50% / cover no-repeat;
   min-height: 380px;
   display: flex;
   align-items: center;
@@ -188,6 +188,96 @@ tr:hover { background: #f5faff; }
 .person-card .affil {
   font-size: 0.85rem;
   color: #555;
+}
+
+/* ---- Keynote speaker entries ---- */
+.speaker-entry {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #d4e6f5;
+}
+
+.speaker-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.speaker-left {
+  flex: 0 0 270px;
+  text-align: left;
+}
+
+.speaker-left img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.25s;
+}
+
+.speaker-left img:hover { filter: brightness(1.15); }
+
+.speaker-left .name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.speaker-left .affil {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.7rem;
+}
+
+.speaker-left .bio {
+  font-size: 0.84rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.speaker-right {
+  flex: 1;
+}
+
+.speaker-right .talk-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #1e5a99;
+}
+
+.speaker-right .talk-abstract {
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.speaker-right .reading-header {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.speaker-right .reading-list {
+  font-size: 0.85rem;
+  margin: 0 0 0 1.2rem;
+}
+
+.speaker-right .reading-list li {
+  margin-bottom: 0.25rem;
+}
+
+.talk-stay-tuned {
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .speaker-entry { flex-direction: column; }
+  .speaker-left { flex: none; }
 }
 
 /* ---- Footer ---- */
