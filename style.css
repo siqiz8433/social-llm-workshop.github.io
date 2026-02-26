@@ -227,13 +227,13 @@ tr:hover { background: #f5faff; }
 }
 
 .speaker-left .affil {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #555;
   margin-bottom: 0.7rem;
 }
 
 .speaker-left .bio {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: #333;
   line-height: 1.5;
 }
@@ -250,18 +250,18 @@ tr:hover { background: #f5faff; }
 }
 
 .speaker-right .talk-abstract {
-  font-size: 0.92rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .speaker-right .reading-header {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
 .speaker-right .reading-list {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin: 0 0 0 1.2rem;
 }
 
@@ -270,7 +270,6 @@ tr:hover { background: #f5faff; }
 }
 
 .talk-stay-tuned {
-  font-style: italic;
   color: #555;
   font-size: 1rem;
 }
