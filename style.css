@@ -250,7 +250,7 @@ tr:hover { background: #f5faff; }
 }
 
 .speaker-left {
-  flex: 0 0 270px;
+  flex: 0 0 340px;
   text-align: left;
 }
 
@@ -312,6 +312,40 @@ tr:hover { background: #f5faff; }
 
 .speaker-right .reading-list li {
   margin-bottom: 0.25rem;
+}
+
+/* ---- Suggested reading toggle ---- */
+.reading-toggle {
+  margin-top: 0.5rem;
+}
+
+.reading-toggle summary {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+  color: #111;
+}
+
+.reading-toggle summary::-webkit-details-marker { display: none; }
+
+.reading-toggle summary::before {
+  content: "▶";
+  font-size: 0.65rem;
+  transition: transform 0.2s;
+  color: #1e5a99;
+}
+
+.reading-toggle[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.reading-toggle .reading-list {
+  margin-top: 0.4rem;
 }
 
 .talk-stay-tuned {
